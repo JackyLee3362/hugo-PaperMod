@@ -1,3 +1,19 @@
-{{- /* Comments area start */ -}}
-{{- /* to add comments read => https://gohugo.io/content-management/comments/ */ -}}
-{{- /* Comments area end */ -}}
+{{- if (eq (.Site.Params.Page.Comment.Enable | default false) true) -}}
+        {{- if (eq (.Params.Comments | default false) true) -}}
+                <script src="https://giscus.app/client.js"
+                        data-repo="JackyLee3362/Jackylee3362.github.io"
+                        data-repo-id="R_kgDOLpCD4w"
+                        data-category="Announcements"
+                        data-category-id="DIC_kwDOLpCD484Ceavz"
+                        data-mapping="pathname"
+                        data-strict="0"
+                        data-reactions-enabled="1"
+                        data-emit-metadata="0"
+                        data-input-position="bottom"
+                        data-theme="preferred_color_scheme"
+                        data-lang="zh-CN"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+        {{- end -}}
+{{- end -}}
